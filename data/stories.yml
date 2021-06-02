@@ -1,0 +1,15 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_ask_innovative
+  - intent: Innovative
+  - action: utter_ask_rate_quality
+  - intent: Quality
+  - action: utter_ask_sevice_quality
+  - intent: Service_Quality
+  - action: utter_results

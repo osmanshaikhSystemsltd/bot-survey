@@ -1,0 +1,74 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- Innovative:
+    use_entities: true
+- Quality:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_results:
+  - text: "We've got your results! We have forwarded it to the department."
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_innovative:
+  - buttons:
+    - payload: Innovative
+      title: Innovative
+    - payload: Somewhat innovative
+      title: Somewhat innovative
+    - payload: Not innovative
+      title: Not innovative
+    text: How innovative is the service?
+  utter_ask_rate_quality:
+  - buttons:
+    - payload: High quality
+      title: High quality
+    - payload: Low quality
+      title: Low quality
+    - payload: Neither high nor low quality
+      title: Neither high nor low quality
+    text: Please rate the quality of the service
+  utter_ask_sevice_quality:
+  - buttons:
+    - payload: Excellent
+      title: Excellent
+    - payload: Medium
+      title: Medium
+    - payload: Poor
+      title: Poor
+    text: Please rate the service quality
+
+actions: []
+forms: {}
+e2e_actions: []
